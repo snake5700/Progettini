@@ -1,0 +1,56 @@
+body{
+    background-color: #161616;
+    margin: 0;
+    height: 100dvh;
+    display: grid;
+    place-content: center center;
+    font: 3.2rem Georgia, serif;
+}
+
+.box{
+    text-align: center;
+    color: #fff;
+}
+
+button{
+    border-radius: 20%;
+    background-color:#61635a;
+    color: #fef;
+    font-weight: bold;
+    padding: 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+.spinner{
+    background-color: #f5dad8;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    aspect-ratio: 1;
+    animation: rotate 6s linear infinite;
+
+    img{
+        display: block;
+        width: 100%;
+        animation: bounce 0.2s linear infinite alternate;
+    }
+}
+
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes bounce {
+    from{
+        transform: translateY(-5%);
+    }
+    to{
+        transform: translateY(-10%);
+    }
+}
